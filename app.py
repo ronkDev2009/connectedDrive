@@ -10,6 +10,7 @@ def home():
     urlPrezzi = "https://www.mimit.gov.it/images/exportCSV/prezzo_alle_8.csv"
 
     respStazioni = requests.get(urlStazioni)
+    """
     respStazioni.raise_for_status()
     respStazioni.encoding = "utf-8"
 
@@ -21,6 +22,9 @@ def home():
     righePrezzi = respPrezzi.text.splitlines(keepends=True)
 
     return(f"Righe stazioni totali: {len(righeStazioni)}")
+    """
+    print(respStazioni)
+    return "Esatto"
 
 if __name__ == '__main__':
     app.run(debug=True)
